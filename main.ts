@@ -1,4 +1,4 @@
-//% color="#037268" icon="\uf519"
+//% color="#037268" icon="\f519"
 namespace lora{
 
     //% block="Connexion au système Lora"
