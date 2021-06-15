@@ -15,7 +15,7 @@ namespace lora{
         basic.showIcon(IconNames.SmallSquare)
         let reception = ""
         while (reception == "") {
-            serial.writeString("?")
+            serial.writeString("ok#")
             reception = serial.readUntil(serial.delimiters(Delimiters.Hash))
             if (reception == "ok") { 
                 basic.showString("C")
