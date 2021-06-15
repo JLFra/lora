@@ -22,7 +22,8 @@ namespace lora{
             }
             else {
                 basic.showIcon(IconNames.Square)
-                basic.pause(500)	
+                basic.pause(500)
+                reception = ""
             }
         }
     }
