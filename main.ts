@@ -4,7 +4,7 @@ namespace lora{
     //% block="Connexion au système Lora || RX $Rx TX $Tx"
     
     //% expandableArgumentMode="toggle"
-    export function connect_lora(Rx: SerialPin, Tx: SerialPin): void {
+    export function connect_lora(Rx?: SerialPin, Tx?: SerialPin): void {
         basic.showIcon(IconNames.Asleep)
         basic.pause(3000)
         serial.setRxBufferSize(100)
