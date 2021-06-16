@@ -1,7 +1,7 @@
 //% color="#037268" icon="\uf1eb"
 namespace lora{
 
-    //% block="Connexion au système Lora || RX %Rx TX %Tx"
+    //% block="Connexion au système Lora || RX $Rx TX $Tx"
     //% Rx.defl=SerialPin.P0 Tx.defl=SerialPin.P14
     //% expandableArgumentMode="enabled"
     export function connect_lora(Rx: SerialPin, Tx: SerialPin): void {
