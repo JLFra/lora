@@ -1,7 +1,8 @@
 //% color="#037268" icon="\uf1eb"
 namespace lora{
-    //% block="Connexion au système Lora || RX $Rx TX $Tx"
     //% Rx.defl=SerialPin.P0 Tx.defl=SerialPin.P14
+    //% block="Connexion au système Lora || RX $Rx TX $Tx"
+    
     //% expandableArgumentMode="toggle"
     export function connect_lora(Rx: SerialPin, Tx: SerialPin): void {
         basic.showIcon(IconNames.Asleep)
