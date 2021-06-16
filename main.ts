@@ -1,10 +1,10 @@
 //% color="#037268" icon="\uf1eb"
 namespace lora{
-    //% Rx.defl=SerialPin.P0 Tx.defl=SerialPin.P14
+
     //% block="Connexion au système Lora || RX $Rx TX $Tx"
-    
     //% expandableArgumentMode="toggle"
-    export function connect_lora(Rx?: SerialPin, Tx?: SerialPin): void {
+    //% Rx.defl=SerialPin.P0 Tx.defl=SerialPin.P14
+    export function connect_lora(Rx: SerialPin, Tx: SerialPin): void {
         basic.showIcon(IconNames.Asleep)
         basic.pause(3000)
         serial.setRxBufferSize(100)
