@@ -1,4 +1,3 @@
-//% color="#037268" icon="\uf1eb"
 namespace lora{
 
     //% block="Connexion au système Lora || RX $Rx TX $Tx"
@@ -8,6 +7,7 @@ namespace lora{
         basic.showIcon(IconNames.Asleep)
         basic.pause(3000)
         serial.setRxBufferSize(100)
+        serial.setTxBufferSize(100)
         serial.redirect(
         Tx,
         Rx,
@@ -16,8 +16,11 @@ namespace lora{
         basic.pause(500)
         basic.showIcon(IconNames.SmallSquare)
         let reception = ""
+        let reception2 =0
         while (reception == "") {
             serial.writeString("ok#")
+            reception2 = serial.readBuffer(2)[0]
+            basic.showNumber(reception2)
             reception = serial.readUntil(serial.delimiters(Delimiters.Hash))
             if (reception == "ok") { 
                 basic.showString("C")
