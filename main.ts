@@ -12,7 +12,7 @@ namespace lora{
         Rx,
         BaudRate.BaudRate1200
         )
-        basic.pause(10000)
+        basic.pause(8000)
         basic.showIcon(IconNames.SmallSquare)
         let reception = ""
         /*let reception2 =0*/
@@ -20,6 +20,7 @@ namespace lora{
             serial.writeString("ok#")
             /*reception2 = serial.readBuffer(2)[0]
             basic.showNumber(reception2)*/
+            basic.pause(4000)
             reception = serial.readUntil(serial.delimiters(Delimiters.Hash))
             if (reception == "ok") { 
                 basic.showString("C")
