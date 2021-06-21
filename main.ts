@@ -20,7 +20,6 @@ namespace lora{
         basic.pause(5000)
         serial.writeString("ok#")
         recept_data = serial.readUntil(serial.delimiters(Delimiters.Hash))
-        basic.showString(recept_data)
         if (recept_data == "ok") { 
             basic.showString("C")
         }
