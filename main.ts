@@ -17,7 +17,7 @@ namespace lora{
         let recept_data = ""
         serial.writeString("ok#")
         recept_data = serial.readUntil(serial.delimiters(Delimiters.Hash))
-        basic.pause(1000)
+        basic.pause(5000)
         serial.writeString("ok#")
         recept_data = serial.readUntil(serial.delimiters(Delimiters.Hash))
         basic.showString(recept_data)
