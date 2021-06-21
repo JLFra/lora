@@ -5,7 +5,6 @@ namespace lora{
     //% Rx.defl=SerialPin.P0 Tx.defl=SerialPin.P14
     export function connect_lora(Rx: SerialPin, Tx: SerialPin): void {
         basic.showIcon(IconNames.Asleep)
-        basic.pause(10000)
         serial.setRxBufferSize(100)
         serial.setTxBufferSize(100)
         serial.redirect(
@@ -13,7 +12,7 @@ namespace lora{
         Rx,
         BaudRate.BaudRate1200
         )
-        basic.pause(500)
+        basic.pause(10000)
         basic.showIcon(IconNames.SmallSquare)
         let reception = ""
         /*let reception2 =0*/
