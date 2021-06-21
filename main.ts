@@ -22,6 +22,8 @@ namespace lora{
             basic.showNumber(reception2)*/
             basic.pause(4000)
             reception = serial.readUntil(serial.delimiters(Delimiters.Hash))
+            basic.showString(reception)
+            basic.pause(4000)
             if (reception == "ok") { 
                 basic.showString("C")
             }
