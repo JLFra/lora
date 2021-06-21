@@ -14,23 +14,27 @@ namespace lora{
         )
         basic.pause(8000)
         basic.showIcon(IconNames.SmallSquare)
-        let reception = ""
+        let reception_ok = false
+        let recept_data = ""
+        let n=1
         /*let reception2 =0*/
-        while (reception == "") {
-            serial.writeString("ok#")
+        while (reception_ok == false) {
+            serial.writeString("1#")
             /*reception2 = serial.readBuffer(2)[0]
             basic.showNumber(reception2)*/
-            basic.pause(4000)
-            reception = serial.readUntil(serial.delimiters(Delimiters.Hash))
-            basic.showString(reception)
-            basic.pause(4000)
-            if (reception == "ok") { 
+            recept_data = serial.readUntil(serial.delimiters(Delimiters.Hash))
+            basic.showString(recept_data)
+            if (recept_data == "1") { 
+                basic.showString("1")
+                serial.writeString("2#")
+            }
+            else if (recept_data == "2") {
                 basic.showString("C")
+                reception_ok = true
             }
             else {
                 basic.showIcon(IconNames.Square)
                 basic.pause(500)
-                reception = ""
             }
         }
     }
