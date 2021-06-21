@@ -16,7 +16,6 @@ namespace lora{
         basic.showIcon(IconNames.SmallSquare)
         let reception_ok = false
         let recept_data = ""
-        let n=1
         /*let reception2 =0*/
         while (reception_ok == false) {
             serial.writeString("1#")
@@ -25,7 +24,7 @@ namespace lora{
             recept_data = serial.readUntil(serial.delimiters(Delimiters.Hash))
             basic.showString(recept_data)
             if (recept_data == "1") { 
-                basic.showString("1")
+                basic.showString("A")
                 serial.writeString("2#")
             }
             else if (recept_data == "2") {
